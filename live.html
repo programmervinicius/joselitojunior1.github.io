@@ -3,7 +3,6 @@ var loadURL = function() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      console.log(xhttp.responseText)
       if (xhttp.responseText == "") {
         document.write("not live right now. <a href='http://joselito.space'>go home</a>");
       } else {
