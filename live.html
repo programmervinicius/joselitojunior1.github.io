@@ -4,7 +4,7 @@ var loadURL = function() {
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       if (xhttp.responseText == "") {
-        document.write("not live right now. <a href='http://joselito.space'>go home</a>");
+        window.location.href = "https://joselito.space";
       } else {
         window.location.href = xhttp.responseText;
       }
