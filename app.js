@@ -52,7 +52,7 @@
                   // do nothing
                 } else {
                     document.getElementById("subscribe-link").addEventListener('click', subscribe);
-                    document.getElementById("subscribe-link").style.display = '';
+                    document.getElementById("subscribe-text").style.display = '';
                 }
             });
         });
