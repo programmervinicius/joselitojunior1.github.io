@@ -9,11 +9,6 @@
           if(m_ != null) document.getElementById('m').innerHTML = m_;
         }
 
-        UpUp.start({
-          'content-url': 'index.html',
-          'assets': ['/icons/icon-512x512.png']
-        });
-
         document.getElementById('n').addEventListener('input', function() {
           localStorage.setItem('n', this.innerHTML);
           document.title = this.innerHTML;
@@ -39,6 +34,7 @@
         }
 
         var OneSignal = OneSignal || [];
+
         OneSignal.push(["init", {
           appId: "985c10bb-7b68-4655-89be-391b0d9f0347",
           autoRegister: false,
@@ -59,4 +55,9 @@
                     document.getElementById("subscribe-link").style.display = '';
                 }
             });
+        });
+
+        UpUp.start({
+          'content-url': 'index.html',
+          'assets': ['/icons/icon-512x512.png']
         });

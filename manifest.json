@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "gcm_sender_id": "469025012513",
-  "Scope": "/",
+  "scope": "/",
   "start_url": "/",
   "icons": [
     {
