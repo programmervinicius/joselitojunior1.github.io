@@ -12,6 +12,7 @@
     <style type="text/css">
       body{color:#555;margin:1rem;padding:0;font-family:monospace}a,a:link,a:visited{color:#0000FF}ul{margin:0;padding:0}ul li{list-style:none}h1{text-transform:uppercase}h2{text-transform:lowercase}.👀{display:inline-block;margin:0;font-size:2.4rem}.⛳{margin-top:.6em}#c{text-decoration:none;font-weight:700}footer{margin: 1.5rem 0 0;}
     </style>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
   </head>
 
   <body>
@@ -101,40 +102,6 @@
       </footer>
 
       <script src="offline.min.js"></script>
-      <script>
-        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-
-        window.onload = function(){
-          var n_ = localStorage.getItem('n');
-          var m_ = localStorage.getItem('m');
-
-          if(n_ != null){ document.getElementById('n').innerHTML = n_; document.title = n_; }
-          if(m_ != null) document.getElementById('m').innerHTML = m_;
-        }
-
-        UpUp.start({
-          'content-url': 'index.html',
-          'assets': ['/icons/icon-512x512.png']
-        });
-
-        document.getElementById('n').addEventListener('input', function() {
-          localStorage.setItem('n', this.innerHTML);
-          document.title = this.innerHTML;
-        });
-
-        document.getElementById('m').addEventListener('input', function() {
-          localStorage.setItem('m', this.innerHTML);
-        });
-
-        var clearStorage = function(){
-          if(localStorage.getItem('n') === null && localStorage.getItem('m') === null){
-            alert("There's nothing to clear! What about edit the website content before trying to clean it?")
-          } else {
-            localStorage.removeItem('n');
-            localStorage.removeItem('m');
-            location.reload();
-          }
-        }
-      </script>
+      <script src="app.js"></script>
   </body>
 </html>

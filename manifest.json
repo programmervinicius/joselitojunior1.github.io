@@ -3,8 +3,9 @@
   "short_name": "Joselito",
   "theme_color": "#ffff00",
   "background_color": "#000080",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "portrait",
+  "gcm_sender_id": "469025012513",
   "Scope": "/",
   "start_url": "/",
   "icons": [
