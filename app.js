@@ -61,5 +61,5 @@
 
         UpUp.start({
           'content-url': 'index.html',
-          'assets': ['/icons/icon-512x512.png']
+          'assets': ['/icons/icon-512x512.png', 'app.js']
         });
