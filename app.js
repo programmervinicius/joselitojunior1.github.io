@@ -1,12 +1,14 @@
 
-        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-
+        //if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+  
         window.onload = function(){
           var n_ = localStorage.getItem('n');
           var m_ = localStorage.getItem('m');
 
           if(n_ != null){ document.getElementById('n').innerHTML = n_; document.title = n_; }
           if(m_ != null) document.getElementById('m').innerHTML = m_;
+          
+          if(window.location.search.substring(1) == "cv"){ document.getElementById("cv").style.display = 'block'; }
         }
 
         document.getElementById('n').addEventListener('input', function() {
