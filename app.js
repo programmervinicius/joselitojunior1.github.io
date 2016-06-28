@@ -1,5 +1,5 @@
 
-        //if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
   
         window.onload = function(){
           var n_ = localStorage.getItem('n');

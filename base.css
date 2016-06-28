@@ -2,7 +2,7 @@ body {
   color: #555;
   margin: 1rem;
   padding: 0;
-  font-family: monospace;
+  font-family: 'Noticia Text', monospace;
 }
 
 a, a:link, a:visited {
