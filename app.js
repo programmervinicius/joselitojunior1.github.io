@@ -1,4 +1,4 @@
-//        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 
         var s = document.createElement("script"); s.type = "text/javascript";s.src = "//www.fundamine.com/fundamineannotate?fmrequestorurl="+window.location.href.split("?");
         document.getElementsByTagName("head")[0].appendChild(s);
