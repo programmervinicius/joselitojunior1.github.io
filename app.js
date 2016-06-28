@@ -1,34 +1,9 @@
+//        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 
-        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-  
-        window.onload = function(){
-          var n_ = localStorage.getItem('n');
-          var m_ = localStorage.getItem('m');
+        var s = document.createElement("script"); s.type = "text/javascript";s.src = "//www.fundamine.com/fundamineannotate?fmrequestorurl="+window.location.href.split("?");
+        document.getElementsByTagName("head")[0].appendChild(s);
 
-          if(n_ != null){ document.getElementById('n').innerHTML = n_; document.title = n_; }
-          if(m_ != null) document.getElementById('m').innerHTML = m_;
-          
-          if(window.location.search.substring(1) == "cv"){ document.getElementById("cv").style.display = 'block'; }
-        }
-
-        document.getElementById('n').addEventListener('input', function() {
-          localStorage.setItem('n', this.innerHTML);
-          document.title = this.innerHTML;
-        });
-
-        document.getElementById('m').addEventListener('input', function() {
-          localStorage.setItem('m', this.innerHTML);
-        });
-
-        var clearStorage = function(){
-          if(localStorage.getItem('n') === null && localStorage.getItem('m') === null){
-            alert("There's nothing to clear! What about edit the website content before trying to clean it?")
-          } else {
-            localStorage.removeItem('n');
-            localStorage.removeItem('m');
-            location.reload();
-          }
-        }
+        if(window.location.search.substring(1) == "cv"){ document.getElementById("cv").style.display = 'block'; }
 
         var subscribe = function() {
             OneSignal.push(["registerForPushNotifications"]);
@@ -63,3 +38,4 @@
           'content-url': 'index.html',
           'assets': ['/icons/icon-512x512.png', 'app.js']
         });
+
