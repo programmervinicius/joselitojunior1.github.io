@@ -1,9 +1,5 @@
         if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 
-        var s = document.createElement("script"); s.type = "text/javascript";
-        s.src = "//www.fundamine.com/fundamineannotate?fmrequestorurl="+window.location.href.split("?");
-        document.getElementsByTagName("head")[0].appendChild(s);
-
         if(window.location.search.substring(1) == "cv"){ document.getElementById("cv").style.display = 'block'; }
 
         var subscribe = function() {
@@ -26,9 +22,7 @@
                 return;
             }
             OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-                if (isEnabled) {
-                  // do nothing
-                } else {
+                if (!isEnabled) {
                     document.getElementById("subscribe-link").addEventListener('click', subscribe);
                     document.getElementById("subscribe-text").style.display = '';
                 }
