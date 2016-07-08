@@ -1,8 +1,8 @@
 {
   "name": "Joselito Júnior",
   "short_name": "Joselito",
-  "theme_color": "#ffff00",
-  "background_color": "#000080",
+  "theme_color": "#000080",
+  "background_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait",
   "gcm_sender_id": "469025012513",
