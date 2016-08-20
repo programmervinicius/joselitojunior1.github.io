@@ -1,0 +1,72 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        var config = {
+            apiKey: "AIzaSyBjBVw0URi9C-b9jGL1Ay3lrSMafVoaUFE"
+            , authDomain: "joselitojunior.firebaseapp.com"
+            , databaseURL: "https://joselitojunior.firebaseio.com"
+            , storageBucket: ""
+        , };
+        firebase.initializeApp(config);
+        window.onload = function () {
+            var dps = [
+                {
+                    label: "Sim"
+                    , color: "#1B5E20"
+                    , y: 0
+                }
+                , {
+                    label: "Não"
+                    , color: "#B71C1C"
+                    , y: 0
+                }
+		, ];
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "theme2"
+                , backgroundColor: "#2B354E"
+                , legend: {
+                    verticalAlign: "top"
+                    , horizontalAlign: "centre"
+                    , fontSize: 18
+                }
+                , data: [{
+                    type: "pie"
+                    , showInLegend: false
+                    , indexLabelFontColor: "white"
+                    , legendMarkerType: "none"
+                    , indexLabelPlacement: "inside"
+                    , indexLabel: "{label}"
+                    , dataPoints: dps
+			}]
+            });
+            firebase.database().ref('polls/cprecife/sim').on('value', function (snapshot) {
+                dps[0].y = snapshot.val();
+                chart.render();
+            });
+            firebase.database().ref('polls/cprecife/nao').on('value', function (snapshot) {
+                dps[1].y = snapshot.val();
+                chart.render();
+            });
+        }
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height:100vh; width:100%;"> </div>
+</body>
+
+</html>
