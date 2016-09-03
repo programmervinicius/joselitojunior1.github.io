@@ -182,6 +182,9 @@
             autoRegister: true,
             notifyButton: {
                 enable: true,
+                size: 'large',
+                prenotify: true,
+                showCredit: false,
                 colors: {
                     'circle.background': 'transparent',
                     'circle.foreground': 'yellow',
@@ -194,6 +197,20 @@
                     'dialog.button.background': 'yellow',
                     'dialog.button.foreground': '#660066'
                 },
+                text: {
+                    'tip.state.unsubscribed': 'Receba notificações',
+                    'tip.state.subscribed': "Você está inscrito! :D",
+                    'tip.state.blocked': "Você bloqueou as notificações :(",
+                    'message.prenotify': 'Clique aqui para receber as notificaçÕes',
+                    'message.action.subscribed': "Obrigado pela sua inscrição! :D",
+                    'message.action.resubscribed': "Você está inscrito! :D",
+                    'message.action.unsubscribed': "Você não irá mais receber as notificações",
+                    'dialog.main.title': 'Configuração',
+                    'dialog.main.button.subscribe': 'Inscrever-se',
+                    'dialog.main.button.unsubscribe': 'Cancelar',
+                    'dialog.blocked.title': 'Notificações Bloqueadas',
+                    'dialog.blocked.message': "Siga estas instruições para desbloquear as notificaçÕes:"
+                }
             }
         }]);
 
