@@ -72,6 +72,17 @@
             width: 300px;
             height: 133px;
         }
+        
+        .notification {
+            position: fixed;
+            bottom: 15px;
+            right: 20px;
+        }
+        
+        .notification img {
+            width: 50px;
+            height: 50px;
+        }
     </style>
 </head>
 
@@ -167,13 +178,25 @@
         <li><a href="https://speakerdeck.com/joselitojunior1/coloque-suas-ideias-no-papel-e-as-transforme-em-aplicativos">Coloque suas ideias no papel e as transforme em aplicativos</a> &middot; 23/11 &middot; <a href="http://feecbr.com.br">feecbr.com.br</a></li>
     </ul>
     <footer>
+        <!--a href="#" class="notification"><img src="notification.svg" /></a-->
         <ul>
             <li>esse website também é <strong>🚀😎.ga/.cf</strong> &middot; <strong>soyjo.xyz</strong> &middot; <strong>joselito.pw</strong> &middot; <strong>joselitojunior.com</strong></li>
             <li><strong>btc:</strong> 3ED5B6o2xYkDnExubUjKqtFiq1RHe95gjF</li>
             <li>new Date().getFullYear() &middot; sem copyrights &middot; feito para humanos</li>
         </ul>
     </footer>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "985c10bb-7b68-4655-89be-391b0d9f0347",
+            autoRegister: true,
+            notifyButton: {
+                enable: false
+            }
+        }]);
+
         if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
         if (!(navigator.language == 'pt-BR')) window.location.href = '/';
         if (window.location.search.substring(1) == "cv") {
