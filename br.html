@@ -188,8 +188,8 @@
                 colors: {
                     'circle.background': 'transparent',
                     'circle.foreground': 'yellow',
-                    'badge.background': 'transparent',
-                    'badge.foreground': '#660066',
+                    'badge.background': '#660066',
+                    'badge.foreground': 'yellow',
                     'badge.bordercolor': '#660066',
                     'pulse.color': '#660066',
                     'dialog.button.background.hovering': 'yellow',
@@ -199,22 +199,22 @@
                 },
                 text: {
                     'tip.state.unsubscribed': 'Receba notificações',
-                    'tip.state.subscribed': "Você está inscrito! :D",
+                    'tip.state.subscribed': "Você está recebendo as notificaçÕes! 😀",
                     'tip.state.blocked': "Você bloqueou as notificações :(",
                     'message.prenotify': 'Clique aqui para receber as notificaçÕes',
-                    'message.action.subscribed': "Obrigado pela sua inscrição! :D",
-                    'message.action.resubscribed': "Você está inscrito! :D",
+                    'message.action.subscribed': "Obrigado pela sua inscrição! 😀",
+                    'message.action.resubscribed': "Você está inscrito! 😀",
                     'message.action.unsubscribed': "Você não irá mais receber as notificações",
                     'dialog.main.title': 'Configuração',
-                    'dialog.main.button.subscribe': 'Inscrever-se',
-                    'dialog.main.button.unsubscribe': 'Cancelar',
+                    'dialog.main.button.subscribe': 'INSCREVER-SE',
+                    'dialog.main.button.unsubscribe': 'CANCELAR RECEBIMENTO',
                     'dialog.blocked.title': 'Notificações Bloqueadas',
                     'dialog.blocked.message': "Siga estas instruições para desbloquear as notificaçÕes:"
                 }
             }
         }]);
 
-        //if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
         if (!(navigator.language == 'pt-BR')) window.location.href = '/';
         if (window.location.search.substring(1) == "cv") {
             document.getElementById("cv").style.display = 'block';

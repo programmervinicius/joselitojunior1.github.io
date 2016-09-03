@@ -178,10 +178,25 @@
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
-            appId: "YOUR_APP_ID",
+            appId: "985c10bb-7b68-4655-89be-391b0d9f0347",
             autoRegister: true,
             notifyButton: {
-                enable: false
+                enable: true,
+                size: 'large',
+                prenotify: true,
+                showCredit: false,
+                colors: {
+                    'circle.background': 'transparent',
+                    'circle.foreground': 'yellow',
+                    'badge.background': '#660066',
+                    'badge.foreground': 'yellow',
+                    'badge.bordercolor': '#660066',
+                    'pulse.color': '#660066',
+                    'dialog.button.background.hovering': 'yellow',
+                    'dialog.button.background.active': 'yellow',
+                    'dialog.button.background': 'yellow',
+                    'dialog.button.foreground': '#660066'
+                }
             }
         }]);
 
