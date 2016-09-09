@@ -181,7 +181,7 @@
             appId: "95e8044d-c715-4fd0-8355-19443931e76a",
             autoRegister: true,
             notifyButton: {
-                enable: false/*,
+                enable: true,
                 size: 'large',
                 showCredit: false,
                 colors: {
@@ -195,10 +195,12 @@
                     'dialog.button.background.active': 'yellow',
                     'dialog.button.background': 'yellow',
                     'dialog.button.foreground': '#660066'
-                }*/
+                }
             }
         }]);
-        OneSignal.push(["sendTags", {lang: "en"}]);
+        OneSignal.push(["sendTags", {
+            lang: "en"
+        }]);
 
 
         if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
