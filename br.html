@@ -185,7 +185,7 @@
                 "message": "Obrigado por se inscrever! Você irá receber todo meu conteúdo em primeira mão."
             },
             notifyButton: {
-                enable: false,
+                enable: true,
                 size: 'large',
                 showCredit: false,
                 colors: {
@@ -217,7 +217,9 @@
             }
         }]);
 
-        OneSignal.push(["sendTags", {lang: "br"}]);
+        OneSignal.push(["sendTags", {
+            lang: "br"
+        }]);
 
         if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
         if (!(navigator.language == 'pt-BR')) window.location.href = '/';
