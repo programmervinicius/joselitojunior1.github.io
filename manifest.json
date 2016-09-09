@@ -5,6 +5,7 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "portrait",
+    "gcm_sender_id": "482941778795",
     "scope": "/",
     "start_url": "/",
     "icons": [{
