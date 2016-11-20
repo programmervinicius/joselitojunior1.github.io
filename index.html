@@ -203,28 +203,22 @@
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "95e8044d-c715-4fd0-8355-19443931e76a",
-            autoRegister: true,
+            autoRegister: false,
             notifyButton: {
-                enable: true,
-                size: 'large',
-                showCredit: false,
-                colors: {
-                    'circle.background': 'transparent',
-                    'circle.foreground': 'yellow',
-                    'badge.background': '#660066',
-                    'badge.foreground': 'yellow',
-                    'badge.bordercolor': '#660066',
-                    'pulse.color': '#660066',
-                    'dialog.button.background.hovering': 'yellow',
-                    'dialog.button.background.active': 'yellow',
-                    'dialog.button.background': 'yellow',
-                    'dialog.button.foreground': '#660066'
-                }
+                enable: false
+            },
+            promptOptions: {
+                actionMessage: "Would you like to receive notifications from my posts, videos, webcasts and everything else?",
+                acceptButtonText: "YUP!",
+                cancelButtonText: "Not really"
             }
         }]);
+
         OneSignal.push(["sendTags", {
             lang: "en"
         }]);
+        
+        OneSignal.showHttpPrompt();
 
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
